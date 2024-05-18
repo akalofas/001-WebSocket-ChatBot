@@ -1,0 +1,32 @@
+{
+  "name": "websocket-chatbot",
+  "version": "1.0.0",
+  "description": "Websocket ChatBox",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akalofas/001-WebSocket-ChatBot.git"
+  },
+  "keywords": [
+    "websocket",
+    "chatbox",
+    "node.js",
+    "express.js"
+  ],
+  "author": "Angelos Kalofas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akalofas/001-WebSocket-ChatBot/issues"
+  },
+  "homepage": "https://github.com/akalofas/001-WebSocket-ChatBot#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
