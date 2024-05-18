@@ -4,7 +4,8 @@
   "description": "Websocket ChatBox",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js",
+    "debug": "DEBUG=app:server,app:socket nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,11 @@
   },
   "homepage": "https://github.com/akalofas/001-WebSocket-ChatBot#readme",
   "dependencies": {
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "http": "^0.0.1-security",
     "socket.io": "^4.7.5"
   },
   "devDependencies": {

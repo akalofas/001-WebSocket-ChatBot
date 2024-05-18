@@ -22,28 +22,19 @@ h2{
     border-radius: 2px;
 }
 
-#chat-window{
-    height: 400px;
-    overflow: auto;
+#feedback {
+    height: 30px;
+    display: flex;
+    justify-content: center;
     background: #f9f9f9;
-}
-
-#output p{
-    padding: 14px 0px;
-    margin: 0 20px;
-    border-bottom: 1px solid #e9e9e9;
-    color: #555;
 }
 
 #feedback p{
     color: #aaa;
-    padding: 14px 0px;
-    margin: 0 20px;
+    padding: 5px;
 }
 
-#output strong{
-    color: #575ed8;
-}
+
 
 label{
     box-sizing: border-box;
@@ -72,4 +63,69 @@ button{
     padding: 12px 0;
     width: 100%;
     border-radius: 0 0 2px 2px;
+}
+
+.chat {
+  --rad: 20px;
+  --rad-sm: 3px;
+  font: 16px/1.5 sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.msg {
+  position: relative;
+  max-width: 75%;
+  padding: 7px 15px;
+  margin-bottom: 5px;
+}
+
+.msg.sent {
+  border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+  background: #42a5f5;
+  color: #fff;
+  margin-left: auto;
+  margin-bottom: 30px;
+}
+
+.msg.rcvd {
+  border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+  background: #f1f1f1;
+  color: #555;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+
+
+.msg.sent:first-child,
+.msg.rcvd+.msg.sent {
+  border-top-right-radius: var(--rad);
+}
+
+.msg.rcvd:first-child,
+.msg.sent+.msg.rcvd {
+  border-top-left-radius: var(--rad);
+}
+
+.msg::before {
+  margin: 0;
+  padding: 0;
+  content: attr(data-time);
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 100%;
+  color: #888;
+  white-space: nowrap;
+}
+
+.msg.sent::before {
+  right: 15px;
+}
+
+.msg.rcvd::before {
+  left: 15px;
 }
