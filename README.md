@@ -1,4 +1,3 @@
-
 ## WebSocket ChatBot Documentation
 
 ## Overview
@@ -29,6 +28,7 @@ WebSocket ChatBot is a real-time chat application designed to provide a basic ye
 - **Installation**: Run `npm install` to install all dependencies.
 - **Starting the Server**: Execute `npm start` to launch the application. The server will be available at `http://localhost:9000` by default.
 - **Environment Variables**: Ensure `.env` contains the correct PORT setting if not using the default.
+- **Edit ./public/index.html:** (optional) In case of not using the default port you must change the line 9 of index.html (const socket = io.connect('http://localhost:9000');) to your PORT setting.
 
 ## Repository
 
