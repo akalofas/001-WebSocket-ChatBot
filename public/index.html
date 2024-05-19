@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebSocket ChatBot</title>
-
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-    const socket = io.connect('http://localhost:5850');
-    </script>
-     
-    <script src="/script.js" defer></script>
-    
-    <link rel="stylesheet" href="/style.css">
-    
-</head>
-<body>
-    <div class="" id="websocket-chat">
-        <h2>ChatBot</h2>
-        <div class="chat" id="chatlist"></div>
-        <div class="chat__window--feedback" id="feedback"></div>
-        <input type="text" class="" id="handle" placeholder="Handle">
-        <input type="text" class="" id="message" placeholder="Message">
-        <button class="" id="send">Send</button>
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebSocket ChatBot</title>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            const socket = io.connect('http://localhost:5850');
+        </script>
+        <script src="/script.js" defer></script>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <div id="websocket-chat">
+            <h2>ChatBot</h2>
+            <div id="chatlist" class="chat__window--list"></div>
+            <div id="feedback" class="chat__window--feedback"></div>
+            <div class="input__area">
+                <input class="input__area--handle" type="text" id="handle" placeholder="Handle">
+                <input class="input__area--message" type="text" id="message" placeholder="Message">
+                <button id="send" class="button__chat--send">Send</button>
+            </div>
+        </div>
+    </body>
 </html>
